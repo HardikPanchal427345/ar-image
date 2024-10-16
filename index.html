@@ -10,22 +10,12 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene vr-mode-ui="false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" gps-camera rotation-reader>
-            <a-assets>
-                <a-asset-item
-                    id="animated-asset"
-                    src="https://first-free-bucket-hnpanchal.s3.amazonaws.com/HD-wallpaper-allu-arjun-ala-vaikunthapuramlo.jpg"
-                ></a-asset-item>
-            </a-assets>
-
-              <!-- 2D Image placed at user's current GPS location -->
-        <a-image
-            gps-entity-place
-            src="https://first-free-bucket-hnpanchal.s3.amazonaws.com/HD-wallpaper-allu-arjun-ala-vaikunthapuramlo.jpg"  
-            scale="5 5 5"
-            position="0 0 0">
-        </a-image>
-
+         <a-scene
+            renderer="logarithmicDepthBuffer: true;"
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
         <!-- GPS Camera to track current location -->
         <a-entity gps-camera rotation-reader></a-entity>
                 <a-entity
