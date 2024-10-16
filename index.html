@@ -23,6 +23,16 @@
                 ></a-asset-item>
             </a-assets>
 
+              <!-- 2D Image placed at user's current GPS location -->
+        <a-image
+            gps-entity-place
+            src="https://first-free-bucket-hnpanchal.s3.amazonaws.com/HD-wallpaper-allu-arjun-ala-vaikunthapuramlo.jpg"  
+            scale="50 50 50"
+            position="0 0 0">
+        </a-image>
+
+        <!-- GPS Camera to track current location -->
+        <a-entity gps-camera rotation-reader></a-entity>
                 <a-entity
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
